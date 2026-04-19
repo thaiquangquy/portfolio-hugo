@@ -1,0 +1,12 @@
+baseURL = "https://thaiquangquy.github.io/"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Quy Thai-Quang"
+theme = "blowfish"
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

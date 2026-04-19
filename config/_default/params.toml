@@ -1,0 +1,32 @@
+colorScheme = "ocean"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+
+[homepage]
+  layout = "profile"
+  homepageImage = "img/quy_thai.jpg"
+  showRecent = true
+  showRecentItems = 3
+  showMoreLink = true
+  showMoreLinkDest = "/posts"
+
+[author]
+  name = "Quy Thai-Quang"
+  image = "img/quy_thai.jpg"
+  headline = "Full-Stack Software Engineer"
+  bio = "A passionate developer who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact."
+  links = [
+    { github = "https://github.com/thaiquangquy" },
+    { linkedin = "https://www.linkedin.com/in/quythai/" },
+    { email = "mailto:thaiquangquy0108@gmail.com" },
+  ]
+
+[article]
+  showDate = true
+  showAuthor = false
+  showReadingTime = true
+  showTableOfContents = false
+
+[list]
+  showSummary = true
+  groupByYear = false
