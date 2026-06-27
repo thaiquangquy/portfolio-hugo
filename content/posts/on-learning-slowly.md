@@ -2,6 +2,7 @@
 title: "On Learning Slowly"
 date: "2024-09-01"
 categories: ["thinking"]
+tags: ["learning", "mindset"]
 description: "We treat learning like a sprint. It might be better as a walk."
 featured: false
 ---

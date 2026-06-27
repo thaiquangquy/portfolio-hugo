@@ -1,7 +1,7 @@
 baseURL = "https://thaiquangquy.github.io/"
 languageCode = "en"
 defaultContentLanguage = "en"
-title = "Quy Thai-Quang"
+title = "Quy Thai Quang"
 theme = "blowfish"
 
 [pagination]
@@ -10,3 +10,8 @@ theme = "blowfish"
 [taxonomies]
   tag = "tags"
   category = "categories"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

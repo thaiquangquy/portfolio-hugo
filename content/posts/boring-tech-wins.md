@@ -2,6 +2,7 @@
 title: "Boring Tech Wins"
 date: "2024-10-03"
 categories: ["tech"]
+tags: ["engineering", "backend"]
 description: "Every new framework promises to solve the same problems. Most of the time, the boring choice is the right one."
 featured: false
 ---

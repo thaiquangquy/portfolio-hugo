@@ -3,18 +3,18 @@ defaultAppearance = "dark"
 autoSwitchAppearance = true
 
 [homepage]
-  layout = "profile"
-  homepageImage = "img/quy_thai.jpg"
+  layout = "background"
+  layoutBackgroundBlur = false
   showRecent = true
   showRecentItems = 3
   showMoreLink = true
   showMoreLinkDest = "/posts"
 
 [author]
-  name = "Quy Thai-Quang"
-  image = "img/quy_thai.jpg"
-  headline = "Full-Stack Software Engineer"
-  bio = "A passionate developer who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact."
+  name = "Quy Thai Quang"
+  image = "img/quy-portrait.jpg"
+  headline = "Senior Full-Stack Engineer · Team Leader · Backend & Distributed Systems"
+  bio = "~10 years shipping production systems across backend, frontend, and cloud. Backend-strongest on Java/Spring Boot + PostgreSQL: multi-tenant distributed services, async job queues, and AWS-hosted v1.0 launches. Open to remote."
   links = [
     { github = "https://github.com/thaiquangquy" },
     { linkedin = "https://www.linkedin.com/in/quythai/" },
@@ -26,7 +26,9 @@ autoSwitchAppearance = true
   showAuthor = false
   showReadingTime = true
   showTableOfContents = false
+  showTaxonomies = true
 
 [list]
   showSummary = true
   groupByYear = false
+  cardView = true

@@ -2,6 +2,7 @@
 title: "Why I Started Building in Public"
 date: "2024-11-15"
 categories: ["personal"]
+tags: ["personal", "reflection"]
 description: "Building in public is uncomfortable. Here's why I think that discomfort is exactly the point."
 featured: true
 ---
