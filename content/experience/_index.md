@@ -79,19 +79,53 @@ layout: "simple"
   border: 1px solid rgba(128,128,128,0.3);
   font-size: 0.8rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .sec-layout { flex-direction: column; }
-  .sec-nav { width: 100%; flex-direction: row; position: static; top: auto; }
-  .sec-nav-btn { flex: 1; text-align: center; }
-  .sec-table td, .sec-table td * { white-space: normal !important; }
-  .sec-table a { white-space: normal; }
+  .sec-nav { order: -1; width: 100%; flex-direction: row; position: static; top: auto; }
+  .sec-nav-btn { flex: 1; text-align: center; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  .exp-table, .exp-table tbody { display: block; }
+  .exp-table thead { display: none; }
+  .exp-table tr {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 0.25rem 0.6rem;
+    border: 1px solid rgba(128,128,128,0.25);
+    border-radius: 0.75rem;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .exp-table td { display: block; padding: 0; border: none; white-space: normal; min-width: 0; }
+  .exp-table td:nth-child(1) img { max-width: 100px; height: 28px; object-fit: contain; object-position: left center; }
+  .exp-table td:nth-child(1) { grid-column: 1; grid-row: 1; align-self: center; }
+  .exp-table td:nth-child(2) { grid-column: 2; grid-row: 1; align-self: center; }
+  .exp-table td:nth-child(3) { grid-column: 1 / -1; grid-row: 2; font-weight: 600; }
+  .exp-table td:nth-child(4) { grid-column: 1; grid-row: 3; font-size: 0.8rem; opacity: 0.7; }
+  .exp-table td:nth-child(5) { grid-column: 2; grid-row: 3; font-size: 0.8rem; opacity: 0.7; }
+  .exp-table td:nth-child(5)::before { content: "· "; }
+  .edu-table, .edu-table tbody { display: block; }
+  .edu-table thead { display: none; }
+  .edu-table tr {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 0.6rem;
+    border: 1px solid rgba(128,128,128,0.25);
+    border-radius: 0.75rem;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .edu-table td { display: block; padding: 0; border: none; white-space: normal; min-width: 0; }
+  .edu-table td:nth-child(1) { grid-column: 1 / -1; grid-row: 1; font-weight: 600; }
+  .edu-table td:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
+  .edu-table td:nth-child(3) { grid-column: 1; grid-row: 3; font-size: 0.8rem; opacity: 0.7; }
+  .edu-table td:nth-child(4) { grid-column: 2; grid-row: 3; font-size: 0.8rem; opacity: 0.7; }
+  .edu-table td:nth-child(4)::before { content: "· "; }
 }
 </style>
 <div class="not-prose sec-layout">
 <div style="flex:1; min-width:0; margin-top:30px">
 <div id="experience" class="sec-panel active">
 <div style="overflow-x:auto;">
-<table class="sec-table">
+<table class="sec-table exp-table">
 <thead>
 <tr>
 <th>Company</th>
@@ -129,7 +163,7 @@ layout: "simple"
 </div>
 <div id="education" class="sec-panel">
 <div style="overflow-x:auto;">
-<table class="sec-table">
+<table class="sec-table edu-table">
 <thead>
 <tr>
 <th>Institution</th>
