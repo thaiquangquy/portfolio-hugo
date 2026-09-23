@@ -1,3 +1,9 @@
 public/
 .hugo_build.lock
 .DS_Store
+
+# tools/ai-detector (Python, dev-only)
+tools/ai-detector/.venv/
+tools/ai-detector/__pycache__/
+tools/ai-detector/**/__pycache__/
+tools/ai-detector/scores.log
