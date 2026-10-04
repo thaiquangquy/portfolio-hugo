@@ -18,6 +18,7 @@ autoSwitchAppearance = true
   links = [
     { github = "https://github.com/thaiquangquy" },
     { linkedin = "https://www.linkedin.com/in/quythai/" },
+    { tiktok = "https://www.tiktok.com/@quythai.dev" },
     { email = "mailto:quythai.dev@gmail.com" },
   ]
 
