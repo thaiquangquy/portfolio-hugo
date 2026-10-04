@@ -1,0 +1,13 @@
+{{- /* Formats an amount. Args: amount, currency ("usd"|"vnd"), compact (bool), prefix (string). */ -}}
+{{- $a := .amount -}}
+{{- $s := "" -}}
+{{- if eq .currency "usd" -}}
+  {{- if and .compact (ge $a 1000) -}}
+    {{- $s = printf "$%gk" (div $a 1000.0) -}}
+  {{- else -}}
+    {{- $s = printf "$%s" (lang.FormatNumber 0 $a) -}}
+  {{- end -}}
+{{- else -}}
+  {{- $s = printf "%sk₫" (replace (lang.FormatNumber 0 $a) "," ".") -}}
+{{- end -}}
+{{- return printf "%s%s" (default "" .prefix) $s -}}

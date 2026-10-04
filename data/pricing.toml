@@ -1,0 +1,60 @@
+# Single source of truth for service prices and the sale.
+# Amounts are the regular (pre-sale) price. USD in dollars, VND in thousands of dong (k₫).
+# Change `sale.rate` (percent off) or any `amount` here; sale price, badge and savings recalculate.
+# Set sale.rate = 0 to hide the sale everywhere.
+
+[sale]
+rate = 20          # percent off
+vnd_k_per_usd = 25 # used for the "≈ $" hint on VND prices
+
+[items.architecture]
+currency = "usd"
+amount = 600
+unit = "/ fixed"
+
+[items.retainer]
+currency = "usd"
+amount = 1750
+unit = "/ month"
+
+[items.build]
+currency = "usd"
+amount = 2000
+prefix = "from "
+compact = true     # 2000 -> $2k
+unit = "/ project"
+
+[items.hourly]
+currency = "usd"
+amount = 30
+unit = "/hr"
+
+[items.selfpaced]
+currency = "vnd"
+amount = 745
+show_usd = true
+
+[items.cohort]
+currency = "vnd"
+amount = 2450
+show_usd = true
+
+[items.mentoring]
+currency = "vnd"
+amount = 1450
+unit = "/ 4 sessions"
+
+[items.playbook]
+currency = "vnd"
+amount = 395
+show_usd = true
+
+[items.bootcamp]
+currency = "vnd"
+amount = 1750
+show_usd = true
+
+[items.mock]
+currency = "vnd"
+amount = 445
+unit = "/ 75 min"

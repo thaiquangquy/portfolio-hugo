@@ -1,0 +1,26 @@
+{{- /* {{< price id="architecture" >}} or {{< price id="hourly" inline="true" >}}. Data: data/pricing.toml. Markup only, no numbers. */ -}}
+{{- $p := site.Data.pricing -}}
+{{- $it := index $p.items (.Get "id") -}}
+{{- if not $it }}{{ errorf "price shortcode: unknown id %q" (.Get "id") }}{{ end -}}
+{{- $rate := $p.sale.rate -}}
+{{- $was := float $it.amount -}}
+{{- $now := div (mul $was (sub 100 $rate)) 100.0 -}}
+{{- $fmt := dict "currency" $it.currency "compact" $it.compact "prefix" $it.prefix -}}
+{{- $wasS := partial "price-fmt.html" (merge $fmt (dict "amount" $was)) -}}
+{{- $nowS := partial "price-fmt.html" (merge $fmt (dict "amount" $now)) -}}
+{{- $saveS := partial "price-fmt.html" (merge $fmt (dict "amount" (sub $was $now) "prefix" "" "compact" false)) -}}
+{{- if .Get "inline" -}}
+{{- if gt $rate 0 }}<s class="svc-was">{{ $wasS }}{{ $it.unit }}</s> {{ end }}{{ $nowS }}{{ $it.unit }}
+{{- else -}}
+<div class="svc-pricing">
+{{- if gt $rate 0 }}
+<div class="svc-row"><span class="svc-tag">-{{ $rate }}%</span><s class="svc-was">{{ $wasS }}</s></div>
+{{- end }}
+<div class="svc-price"><span class="svc-new">{{ $nowS }}</span>
+{{- with $it.unit }} <small>{{ . }}</small>{{ end }}
+{{- if and $it.show_usd (eq $it.currency "vnd") }} <small>≈ ${{ lang.FormatNumber 0 (math.Round (div $now $p.sale.vnd_k_per_usd)) }}</small>{{ end }}</div>
+{{- if gt $rate 0 }}
+<div class="svc-save"><span data-en="You save" data-vi="Tiết kiệm">You save</span> {{ $saveS }} <span class="svc-ltd" data-en="· limited time" data-vi="· có thời hạn">· limited time</span></div>
+{{- end }}
+</div>
+{{- end -}}
